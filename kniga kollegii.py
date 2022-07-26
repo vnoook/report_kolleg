@@ -11,7 +11,7 @@ import datetime
 import openpyxl
 
 # считаю время скрипта
-time_start = time.time()
+time_start = time.monotonic()
 print('\n' + 'начинается' + '.'*20)
 
 
@@ -344,7 +344,7 @@ else:
     print('\n\n\n!!!   Нет ни одного файла в папке RES или папка не существует  !!!\n\n\n')
 
 # считаю время скрипта
-time_finish = time.time()
+time_finish = time.monotonic()
 print('\n' + '.'*30 + 'закончено за', round(time_finish-time_start, 3), 'секунд')
 
 # закрываю программу
