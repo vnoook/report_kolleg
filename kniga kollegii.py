@@ -15,7 +15,7 @@ time_start = time.monotonic()
 print('\n' + 'начинается' + '.'*20)
 
 
-# функция для анализа что выдавать в ячейку
+# функция для анализа, что выдавать в ячейку
 # в ячейке может быть целое число, дробное число, строка или пусто
 def conv_cell(cell_value):
     if type(cell_value) == int:
@@ -250,7 +250,7 @@ wb_kolleg = openpyxl.load_workbook(xl_template)
 # переменная которая будет следить за тем, чтобы хотя бы над одним файлом проводились действия
 file_change_event = False
 
-# иду по листам шаблона чтобы вставить данные из файлов с данными
+# иду по листам шаблона, чтобы вставить данные из файлов с данными
 for i_list, i_value in xl_cell_ranges.items():
     # проверяю на существование файла из i_value[0]
     # если есть, то делаю с ним дела, если нет, то пропускаю этот файл
@@ -281,7 +281,7 @@ for i_list, i_value in xl_cell_ranges.items():
 
                 for row_in_range in cells_range_wb_file_data:
                     if cells_range_wb_file_data.index(row_in_range) == 21:
-                        # если строка индекс строки 21, то пропускаю, там нет информации на 2й странице
+                        # если строка индекс строки 21, то пропускаю, там нет информации на 2‑й странице
                         pass
                     else:
                         for cell_in_row in row_in_range:
